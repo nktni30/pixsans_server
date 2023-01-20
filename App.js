@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 
-dotenv.config({path:'./config.env'});
+dotenv.config({ path: './config.env' });
 
 //link database connection
 require('./db/conn')
@@ -13,7 +13,7 @@ app.use(express.json());
 //link router for route page
 app.use(require('./router/auth'));
 
-const PORT = process.env.PORT || 6000
+const PORT = process.env.PORT || 6102
 
 
 const middleware = (req, res, next) => {
@@ -38,11 +38,11 @@ app.get('/admin_login', (req, res) => {
     res.send(`hello from admin login page`);
 });
 
-app.get('/admin_register', (req, res)=>{
+app.get('/admin_register', (req, res) => {
     res.send(`hello from admin register`)
 });
 
-app.get('/subscribe', (req, res)=>{
+app.get('/subscribe', (req, res) => {
     res.send(`hello from subscribe`)
 })
 
