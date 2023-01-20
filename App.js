@@ -13,7 +13,7 @@ app.use(express.json());
 //link router for route page
 app.use(require('./router/auth'));
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 6000
 
 
 const middleware = (req, res, next) => {
